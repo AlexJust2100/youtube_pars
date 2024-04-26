@@ -1,0 +1,13 @@
+name: main
+
+on:
+    workflow_dispatch:
+    
+jobs:
+    Run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v4
+            - name: run app
+              run: python go.py
