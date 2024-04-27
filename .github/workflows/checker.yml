@@ -1,0 +1,19 @@
+name: checker
+
+on:
+    push:
+        branches:
+            - 'main'
+    workflow_run:
+        workflows: [checker]
+        types:
+            - completed
+    
+jobs:
+    Run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v4
+            - name: run app
+              run: python check_all.py
