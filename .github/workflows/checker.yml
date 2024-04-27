@@ -1,11 +1,8 @@
 name: checker
 
 on:
-    push:
-        branches:
-            - 'main'
     schedule:
-        - cron: "5 * * * *"
+        - cron: "*/5 * * * *"
     
 jobs:
     Run:
