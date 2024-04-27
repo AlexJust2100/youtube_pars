@@ -1,0 +1,16 @@
+name: get_raw_proxy
+
+on:
+    schedule:
+        - cron: "3/10 * * * *"
+    
+jobs:
+    Run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v4
+            - name: get ready
+              run: pip install requests
+            - name: run app
+              run: python proxy_raw.py
