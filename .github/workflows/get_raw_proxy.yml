@@ -1,8 +1,9 @@
 name: get_raw_proxy
 
 on:
-    schedule:
-        - cron: "3/10 * * * *"
+    workflow_dispatch:
+    #schedule:
+    #    - cron: "3/10 * * * *"
     
 jobs:
     Run:
