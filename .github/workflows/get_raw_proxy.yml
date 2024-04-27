@@ -2,7 +2,7 @@ name: get_raw_proxy
 
 on:
     schedule:
-        - cron: "* * * * *"
+        - cron: "3/10 * * * *"
     
 jobs:
     Run:
