@@ -1,10 +1,7 @@
 name: checker
 
 on:
-    workflow_run:
-        workflows: [get_raw_proxy]
-        types:
-            - completed
+    workflow_dispatch:
     
 jobs:
     Run:
