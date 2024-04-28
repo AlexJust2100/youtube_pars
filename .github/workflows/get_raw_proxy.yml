@@ -1,13 +1,8 @@
 name: get_raw_proxy
 
 on:  
-    push:
-        branches:
-        - main
-    workflow_run:
-        workflows: [checker]
-        types:
-            - completed
+    workflow_dispatch:
+
     
 jobs:
     Run:
