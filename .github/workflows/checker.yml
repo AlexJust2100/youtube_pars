@@ -1,9 +1,10 @@
 name: checker
 
 on:
-    workflow_dispatch:
-    #schedule:
-    #    - cron: "*/5 * * * *"
+    workflow_run:
+        workflows: [get_raw_proxy]
+        types:
+            - completed
     
 jobs:
     Run:
